@@ -1,0 +1,43 @@
+!!! Strict
+%html{:lang => :en}
+  %head
+    %title
+      Super PAC Man
+
+    %meta{"http-equiv" => "Content-Type",       :content => "text/html; charset=utf-8"}
+    %meta{"http-equiv" => "Content-Style-Type", :content => "text/css"}
+    %meta{:name => "google-site-verification",  :content => ''}
+
+    = include_favicon :favicon
+
+    //= include_stylesheet :master,      :media => :screen
+    
+    = include_javascript "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
+    = include_javascript "http://maps.googleapis.com/maps/api/js?sensor=false"
+    = include_javascript "http://www.google.com/jsapi"
+    = content :javascript
+
+    :javascript
+      - if production?
+        :javascript
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-00000000-0']);
+          _gaq.push(['_trackPageview']);
+  
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+  %body#page                    
+    #identity
+      #identity-content
+        %a{:href => "/"}
+          %h1 Super PAC Man
+        #tagline
+          Lets check out some PAC data
+
+    #content
+    
+      = yield

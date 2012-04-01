@@ -1,0 +1,6 @@
+development:
+  adapter: postgres
+  host: localhost
+  database: super-pac
+  username: jbreen
+  password:
