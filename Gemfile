@@ -5,6 +5,7 @@ gem "sinatra"
 gem "sinatra-initializers"
 gem "sinatra-reloader"
 gem "haml"
+gem "builder"
 
 # data
 gem "dalli"

@@ -6,6 +6,15 @@ module SuperPacMan
       filing.download
       filing.summary
     end
+    
+    def displayHash(hash)
+      result = ''
+      hash.each do |row|
+        result << "<strong>#{row[0]}:</strong> #{row[1]} <br />"
+      end
+      result
+    
+    end
   
     def current_menu
       @current_menu

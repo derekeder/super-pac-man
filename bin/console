@@ -8,6 +8,6 @@ $:.unshift File.expand_path(File.join(base, "..", "lib"))
 require "irb"
 require "chronic"
 
-require "crime"
+require "superpacman"
 
 IRB.start

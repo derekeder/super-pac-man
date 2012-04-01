@@ -4,6 +4,7 @@ require "sinatra-initializers"
 require "sinatra/json"
 require "sequel"
 require "uri"
+require "builder"
 
 module SuperPacMan
   class Application < Sinatra::Base
